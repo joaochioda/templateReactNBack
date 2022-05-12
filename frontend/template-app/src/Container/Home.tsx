@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { UserContext } from "../Contexts/userContext";
 
 export function Home() {
+  const { user } = useContext(UserContext);
   return (
     <div>
       <h1>Home</h1>
@@ -10,6 +12,7 @@ export function Home() {
           <Link to="/about">About</Link>
         </li>
       </ul>
+      <p>{user.name}</p>
     </div>
   );
 }
