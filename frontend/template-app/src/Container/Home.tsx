@@ -4,6 +4,7 @@ import { UserContext } from "../Contexts/userContext";
 
 export function Home() {
   const { user } = useContext(UserContext);
+  // console.log(process.env.REACT_APP_API_URL);
   return (
     <div>
       <h1>Home</h1>

@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import axios from "axios";
-const baseUrl = "http://localhost:3000/api/";
+const baseUrl = "http://localhost:4444/api/";
 // Add a request interceptor
 axios.interceptors.request.use(
   function (config) {
