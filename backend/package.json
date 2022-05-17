@@ -1,0 +1,23 @@
+{
+  "name": "docker-node-posq",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx sequelize db:create && npx sequelize db:migrate & nodemon --legacy-watch server.js",
+    "test": "jest --coverage --coverageReporters='json-summary'"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.15",
+    "path": "^0.12.7",
+    "pg": "^8.7.1",
+    "sequelize": "^6.12.0-beta.1"
+  },
+  "devDependencies": {
+    "check-code-coverage": "^1.10.0",
+    "jest": "^27.5.1"
+  }
+}

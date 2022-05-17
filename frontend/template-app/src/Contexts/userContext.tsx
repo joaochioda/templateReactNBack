@@ -1,6 +1,6 @@
 import React, { createContext, useState } from "react";
 
-export const UserContext = createContext<UserProviderType>(null as any);
+export const UserContext = createContext<UserContextType | null>(null);
 
 interface UserProviderProps {
   children: React.ReactNode;
@@ -11,7 +11,7 @@ export interface UserProps {
   age: number;
 }
 
-interface UserProviderType {
+export interface UserContextType {
   user: UserProps;
   setLoggedUser: (user: UserProps) => void;
 }
