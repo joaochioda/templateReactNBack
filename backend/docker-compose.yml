@@ -13,21 +13,15 @@ services:
         max-file: "3"
     ports:
       - "5438:5432"
-    networks:
-      - back_network_test
 
   server:
     depends_on:
       - postgres
+    environment:
+      - DB_HOST=postgres
     build:
       context: .
     volumes:
       - .:/usr/app
     ports:
       - "5000:5000"
-    networks:
-      - back_network_test
-
-networks:
-  back_network_test:
-    name: back_network_test_name
