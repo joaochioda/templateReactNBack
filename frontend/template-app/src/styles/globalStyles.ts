@@ -35,4 +35,7 @@ export default createGlobalStyle`
         color: ${(props: ThemeProps) => props.theme.text};
         height: 30px;
     }
+    :root {
+        --blue-500: #2196f3;
+    }
 `;
