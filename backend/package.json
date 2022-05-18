@@ -1,5 +1,8 @@
 {
   "name": "docker-node-posq",
+  "jest": {
+    "testPathIgnorePatterns": ["__mocks__"]
+  },
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
