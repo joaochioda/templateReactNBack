@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import { UserContext } from "../Contexts/userContext";
-import { UserContextType } from "../Contexts/userContext";
+import { UserContextType, UserContext } from "src/Contexts/userContext";
 import { HomeContainer } from "./Style";
 
 export function Home() {
