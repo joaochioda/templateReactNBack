@@ -1,16 +1,19 @@
 /* eslint-disable no-constant-condition */
-import React from "react";
+import React, { useState } from "react";
 import { Route, BrowserRouter, Routes } from "react-router-dom";
 import { Home } from "./Container/Home";
-import { lightTheme } from "./styles/theme";
+import { lightTheme, darkTheme } from "./styles/theme";
 import GlobalStyles from "./styles/globalStyles";
 import { ThemeProvider } from "styled-components";
 import Userprovider from "./Contexts/userContext";
+import { Header } from "./components/Header";
 const App = () => {
+  const [isDarkTheme, setIsDarkTheme] = useState(false);
   return (
-    <ThemeProvider theme={lightTheme}>
+    <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
       <GlobalStyles />
       <Userprovider>
+        <Header handleDarkTheme={() => setIsDarkTheme(!isDarkTheme)} />
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
