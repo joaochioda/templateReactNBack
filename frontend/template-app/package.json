@@ -26,7 +26,9 @@
     "prettier-format": "prettier --config .prettierrc 'src/**/*.tsx' --write",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "e2e": "cypress open"
+    "e2e": "cypress run",
+    "run:build:mode": "npm run build && serve -s build",
+    "ci": "start-server-and-test run:build:mode 3000 e2e"
   },
   "eslintConfig": {
     "extends": [
@@ -56,6 +58,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.29.4",
     "prettier": "2.6.2",
+    "serve": "^13.0.2",
     "start-server-and-test": "^1.14.0"
   }
 }
