@@ -7,7 +7,7 @@ describe("example to-do app", () => {
   });
 
   it("displays one item list", () => {
-    cy.get("li").should("have.length", 2);
+    cy.get("li").should("have.length", 1);
 
     cy.get("li").first().should("have.text", "About");
   });
