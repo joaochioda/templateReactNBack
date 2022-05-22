@@ -7,6 +7,9 @@ import GlobalStyles from "./styles/globalStyles";
 import { ThemeProvider } from "styled-components";
 import Userprovider from "./Contexts/userContext";
 import { Header } from "./components/Header";
+
+import "./i18n";
+
 const App = () => {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
   return (
