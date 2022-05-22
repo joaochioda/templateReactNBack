@@ -6,7 +6,7 @@ import { lightTheme, darkTheme } from "./styles/theme";
 import GlobalStyles from "./styles/globalStyles";
 import { ThemeProvider } from "styled-components";
 import Userprovider from "./Contexts/userContext";
-import { Header } from "./components/Header";
+import { Header } from "./components/Header/Header";
 
 import "./i18n";
 

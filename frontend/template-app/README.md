@@ -1,8 +1,6 @@
 npx create-react-app {name} --template typescript
-todos - axios request
 
-todo
-i18n
+todos - axios request
 
 commands
 npm run test
