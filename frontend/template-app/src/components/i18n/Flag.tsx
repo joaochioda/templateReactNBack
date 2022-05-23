@@ -1,23 +1,30 @@
 import React from "react";
-import styled from "styled-components";
-
-const ImgFlag = styled.img`
-  width: 100px;
-`;
+import { BrasilFlag, EuaFlag } from "src/assets";
+import { FlagWrapper } from "./style";
 
 interface FlagProps {
-  image: string;
-  isSelected: boolean;
   onClick: () => void;
+  selectedLanguage: string;
 }
 
-const Flag = ({ image, isSelected, ...props }: FlagProps) => (
-  <ImgFlag
-    alt="flag"
-    src={image}
-    className={isSelected ? "flag selected" : "flag"}
-    {...props}
-  />
-);
+const Flag = ({ onClick, selectedLanguage }: FlagProps) => {
+  const frontFlag = selectedLanguage === "en-US" ? EuaFlag : BrasilFlag;
+  const backFlag = selectedLanguage === "en-US" ? BrasilFlag : EuaFlag;
+
+  return (
+    <FlagWrapper>
+      <div className="card" onClick={onClick}>
+        <div className="content">
+          <div className="front">
+            <img src={frontFlag} />
+          </div>
+          <div className="back">
+            <img src={backFlag} />
+          </div>
+        </div>
+      </div>
+    </FlagWrapper>
+  );
+};
 
 export default Flag;

@@ -1,27 +1,9 @@
 import styled from "styled-components";
 
 export const ButtonThemeWrapper = styled.div`
-  * {
-    box-sizing: border-box;
-  }
-
-  body {
-    background-color: #fafafa;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-    transition: background 0.2s linear;
-  }
-
-  body.dark {
-    background: #292c35;
-  }
-
   .checkbox {
     opacity: 0;
-    position: absolute;
+    position: relative;
   }
 
   .label {

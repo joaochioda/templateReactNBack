@@ -8,13 +8,14 @@ export function Home() {
   const { user } = useContext(UserContext) as UserContextType;
   return (
     <HomeContainer>
-      <h1>Home</h1>
       <h2>
         <Translator path="home.message" />
       </h2>
       <ul>
         <li>
-          <Link to="/about">About</Link>
+          <Link to="/about">
+            <Translator path="home.about" />
+          </Link>
         </li>
       </ul>
       <p>{user?.name}</p>

@@ -17,7 +17,7 @@ export interface UserContextType {
 }
 
 export default function Userprovider(props: UserProviderProps) {
-  const [user, setUser] = useState({ name: "joao" } as UserProps);
+  const [user, setUser] = useState({ name: "User" } as UserProps);
 
   function setLoggedUser(user: UserProps) {
     setUser(user);
