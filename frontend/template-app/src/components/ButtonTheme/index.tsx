@@ -11,10 +11,9 @@ export const ButtonTheme = ({ onClick }: ButtonThemeProps) => {
     <ButtonThemeWrapper>
       <input type="checkbox" className="checkbox" id="chk" onClick={onClick} />
       <label className="label" htmlFor="chk">
-        <FontAwesomeIcon icon={faMoon} />
         <FontAwesomeIcon icon={faSun} />
+        <FontAwesomeIcon icon={faMoon} />
 
-        <i className="fas fa-sun"></i>
         <div className="ball"></div>
       </label>
     </ButtonThemeWrapper>
