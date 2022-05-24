@@ -38,11 +38,11 @@ export const ButtonThemeWrapper = styled.div`
 
   .fa-moon {
     color: #f1c40f;
+    position: absolute;
+    right: 5px;
   }
 
   .fa-sun {
-    position: absolute;
-    right: 5px;
     color: #f39c12;
   }
 `;
