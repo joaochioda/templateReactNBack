@@ -5,7 +5,7 @@ npx create-react-app {name} --template typescript
 
 # Todo 
 - axios request
-- https://codepen.io/edeesims/pen/wvpYWW
+- use setStorage to storage theme color
 
 # Commands
 ```bash
