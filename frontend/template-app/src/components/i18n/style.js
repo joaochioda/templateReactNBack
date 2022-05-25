@@ -11,6 +11,7 @@ export const FlagWrapper = styled.div`
     height: 75px;
     float: left;
     perspective: 500px;
+    transform: scale(0.8);
   }
 
   .content {

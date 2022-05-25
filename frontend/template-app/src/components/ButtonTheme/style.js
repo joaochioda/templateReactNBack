@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const ButtonThemeWrapper = styled.div`
+  transform: scale(0.8);
   .checkbox {
     opacity: 0;
     position: relative;
