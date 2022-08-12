@@ -2,7 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 
 interface TranslatorProps {
-  path: any;
+  path: string;
 }
 
 const Translator = ({ path }: TranslatorProps) => {
