@@ -4,6 +4,7 @@ export const ButtonThemeWrapper = styled.div`
   display: flex;
   align-items: center;
 
+  transform: scale(0.8);
   .checkbox {
     opacity: 0;
     position: relative;
