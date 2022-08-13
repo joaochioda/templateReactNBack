@@ -1,11 +1,15 @@
 import React from "react";
-import { useTranslation } from "react-i18next";
 
 import Flag from "./Flag";
 
-const I18n = () => {
-  const { i18n } = useTranslation();
+interface i18nProps {
+  i18n: {
+    changeLanguage: (language: string) => void;
+    language: string;
+  };
+}
 
+const I18n = ({ i18n }: i18nProps) => {
   function handleChangeLanguage() {
     i18n.changeLanguage(i18n.language === "en-US" ? "pt-BR" : "en-US");
   }

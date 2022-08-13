@@ -13,7 +13,7 @@ const Flag = ({ onClick, selectedLanguage }: FlagProps) => {
 
   return (
     <FlagWrapper>
-      <div className="card" onClick={onClick}>
+      <div className="card" onClick={onClick} data-testid={"flag-i18n"}>
         <div className="content">
           <div className="front">
             <img src={frontFlag} />
