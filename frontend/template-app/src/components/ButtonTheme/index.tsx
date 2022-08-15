@@ -9,7 +9,13 @@ interface ButtonThemeProps {
 export const ButtonTheme = ({ onClick }: ButtonThemeProps) => {
   return (
     <ButtonThemeWrapper>
-      <input type="checkbox" className="checkbox" id="chk" onClick={onClick} />
+      <input
+        type="checkbox"
+        className="checkbox"
+        id="chk"
+        onClick={onClick}
+        data-testid={"theme-checkbox"}
+      />
       <label className="label" htmlFor="chk">
         <FontAwesomeIcon icon={faSun} />
         <FontAwesomeIcon icon={faMoon} />
