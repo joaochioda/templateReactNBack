@@ -2,12 +2,24 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import Translator from "src/components/i18n/Translator";
 import { UserContextType, UserContext } from "src/Contexts/userContext";
-import { HomeContainer } from "./Style";
+import * as S from "./Style";
+import { useFetch } from "src/hooks/useFetch";
+import { User } from "src/hooks/useFetch";
+import { fetchUrl } from "../api";
 
 export function Home() {
   const { user } = useContext(UserContext) as UserContextType;
+
+  const [dataUser, loadinUser, errorUser] = useFetch("users", fetchUrl) as [
+    User[],
+    boolean,
+    unknown
+  ];
+
+  if (errorUser) return <div>Error...</div>;
+
   return (
-    <HomeContainer>
+    <S.HomeContainer>
       <h2>
         <Translator path="home.message" />
       </h2>
@@ -19,6 +31,17 @@ export function Home() {
         </li>
       </ul>
       <p>{user?.name}</p>
-    </HomeContainer>
+
+      <h2>Users:</h2>
+      {loadinUser ? (
+        <p>Loading...</p>
+      ) : (
+        <ul>
+          {dataUser.map((user) => (
+            <li key={user.id}>{user.name}</li>
+          ))}
+        </ul>
+      )}
+    </S.HomeContainer>
   );
 }

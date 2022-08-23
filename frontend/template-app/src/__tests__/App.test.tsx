@@ -3,19 +3,19 @@ import { fireEvent, render, screen } from "@testing-library/react";
 import App from "../App";
 
 describe("App", () => {
-  test("renders learn react link", () => {
+  it("renders learn react link", () => {
     render(<App />);
     const linkElement = screen.getByText(/Hello World!/i);
     expect(linkElement).toBeInTheDocument();
   });
 
-  test("router redirect", () => {
+  it("router redirect", () => {
     render(<App />);
 
     const linkElement = screen.getByRole("link", { name: /about/i });
     fireEvent.click(linkElement);
 
-    const aboutPage = screen.getByText(/about page/i);
+    const aboutPage = screen.getByText(/about/i);
     expect(aboutPage).toBeInTheDocument();
   });
 });

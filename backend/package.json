@@ -1,7 +1,9 @@
 {
   "name": "docker-node-posq",
   "jest": {
-    "testPathIgnorePatterns": ["__mocks__"]
+    "testPathIgnorePatterns": [
+      "__mocks__"
+    ]
   },
   "version": "1.0.0",
   "description": "",
@@ -13,6 +15,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "nodemon": "^2.0.15",
     "path": "^0.12.7",
