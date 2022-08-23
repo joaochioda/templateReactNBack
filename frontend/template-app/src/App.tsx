@@ -7,6 +7,7 @@ import GlobalStyles from "./styles/globalStyles";
 import { ThemeProvider } from "styled-components";
 import Userprovider from "./Contexts/userContext";
 import { Header } from "./components/Header/Header";
+import { About } from "./Container/About";
 
 import "./i18n";
 
@@ -20,7 +21,7 @@ const App = () => {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<div>about page</div>} />
+            <Route path="/about" element={<About />} />
             <Route path="*" element={<div>not found</div>} />
           </Routes>
         </BrowserRouter>
