@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { useState, useEffect } from "react";
 
 export type User = {
   id: number;
@@ -16,7 +17,6 @@ export function useFetch<T>(url: string, apiInstance: any) {
         setLoading(true);
         const res = await apiInstance(url);
         const json = await res.json();
-
         setData(json);
       } catch (error: unknown) {
         setError(error);
