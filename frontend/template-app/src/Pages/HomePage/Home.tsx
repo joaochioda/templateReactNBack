@@ -5,9 +5,12 @@ import { UserContextType, UserContext } from "src/Contexts/userContext";
 import * as S from "./Style";
 import { useFetch } from "src/hooks/useFetch";
 import { User } from "src/hooks/useFetch";
-import { fetchUrl } from "../api";
 
-export function Home() {
+type PropsHome = {
+  fetchUrl: () => Promise<{ json: () => { id: number; name: string }[] }>;
+};
+
+export function Home({ fetchUrl }: PropsHome) {
   const { user } = useContext(UserContext) as UserContextType;
 
   const [dataUser, loadinUser, errorUser] = useFetch("users", fetchUrl) as [

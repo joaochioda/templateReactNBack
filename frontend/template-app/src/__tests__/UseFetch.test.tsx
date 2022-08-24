@@ -1,6 +1,6 @@
 import React from "react";
 import { useFetch, User } from "src/hooks/useFetch";
-import { render, screen, waitFor } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import { act } from "react-dom/test-utils";
 
 describe("App", () => {
@@ -20,6 +20,7 @@ describe("App", () => {
           ]),
       });
     });
+
     await act(async () => {
       render(<TestComponent fetchUrl={fetchUrl} />);
     });
@@ -34,6 +35,7 @@ describe("App", () => {
         json: () => Promise.resolve([]),
       });
     });
+
     await act(async () => {
       render(<TestComponent fetchUrl={fetchUrl} />);
     });
